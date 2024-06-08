@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!-- ====================================== -->
+    <!--font-awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- ====================================== -->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>Smart Login</header>
+      <!-- form -->
+      <form action="">
+        <!-- email -->
+        <div class="field email">
+          <div class="input-area">
+            <input
+              type="text"
+              placeholder="Email Address"
+              class="form-control form-control-lg"
+              id="emailInputLoginF"
+            />
+          </div>
+        </div>
+        <!--password  -->
+        <div class="field password mt-3">
+          <div class="input-area">
+            <input
+              type="password"
+              placeholder="Password"
+              class="form-control form-control-lg"
+              id="passwordInputLoginF"
+            />
+          </div>
+        </div>
+        <!-- btn -->
+        <button
+          type="submit"
+          class="bg-primary text-white btn px-5 mt-4"
+          id="btnLogin"
+        >
+          Login
+        </button>
+      </form>
+      <div class="alert alert-danger d-none" id="required">All inputs is required</div>
+      <div class="alert alert-danger d-none" id="Invalid">Invalid username or password</div>
+      <!-- turn to Sign up now  -->
+      <div class="sign-txt">
+        Don’t have an account? <a href="index.html">Sign up </a>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

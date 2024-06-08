@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!-- ====================================== -->
+    <!--font-awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- ====================================== -->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>Smart sign up</header>
+      <!-- form -->
+      <form action="">
+        <!-- Name -->
+        <div class="field name">
+          <div class="input-area">
+            <input
+              type="text"
+              placeholder="Enter Name (Must 3 charter)"
+              class="form-control form-control-lg"
+              id="nameUp"
+            />
+          </div>
+          <div
+            class="alert p-1 alert-success mt-2 d-none text-muted ag-fs"
+            id="aglare"
+          ></div>
+        </div>
+        <!-- email -->
+        <div class="field email mt-3">
+          <div class="input-area">
+            <input
+              type="text"
+              placeholder="Email Address (invade Email)"
+              class="form-control form-control-lg"
+              id="emailUp"
+            />
+          </div>
+        </div>
+        <!--password  -->
+        <div class="field password mt-3">
+          <div class="input-area">
+            <input
+              type="password"
+              placeholder="Password "
+              class="form-control form-control-lg"
+              id="passwordUp"
+            />
+          </div>
+          <div class="ag-fs mt-4 alert alert-danger d-none" id="spanAgd">
+            Minimum eight characters, at least one letter and one number
+          </div>
+        </div>
+        <!-- btn -->
+        <button
+          type="submit"
+          class="bg-warning btn btn-warning px-5 mt-4"
+          id="btnUp"
+        >
+          sign up
+        </button>
+      </form>
+      <div class="alert-danger alert d-none" id="alertForm">
+        Must full Forms OR Sign in
+      </div>
+      <div class="alert-danger alert d-none" id="alreadyExists">
+        Email already exists
+      </div>
+      <div class="alert-success alert d-none" id="alertFormup">
+        sign up Done , Can Sign in Now
+      </div>
+      <!-- turn to Sign up now  -->
+      <div class="sign-txt">
+        You have an account? <a href="login.html"> Sign in</a>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/register.js"></script>
+  </body>
+</html>
