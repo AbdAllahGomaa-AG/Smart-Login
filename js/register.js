@@ -44,8 +44,11 @@ document.forms[0].addEventListener("submit", function (eventInfo) {
     nameUp.classList.add("is-valid");
     passwordUp.classList.add("is-valid");
     emailUp.classList.add("is-invalid");
+
     alreadyExists.classList.remove("d-none");
+
     alertFormup.classList.add("d-none");
+    alertForm.classList.add("d-none");
   }
 });
 
@@ -79,6 +82,7 @@ function add() {
     emailUp.classList.remove("is-valid");
     console.log("done");
   } else {
+    //
     alertForm.classList.remove("d-none");
     // is-invalid
     nameUp.classList.add("is-invalid");
