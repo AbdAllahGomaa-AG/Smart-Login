@@ -24,7 +24,7 @@ if (localStorage.getItem("userArray") == null) {
 // ======validation keypress =====
 // ===============================
 for (let i = 0; i < inputs.length; i++) {
-  inputs[i].addEventListener("keypress", function (eventInfo) {
+  inputs[i].addEventListener("blur", function (eventInfo) {
     validation(eventInfo.target);
   });
 }
@@ -38,11 +38,15 @@ document.forms[0].addEventListener("submit", function (eventInfo) {
   eventInfo.preventDefault();
   if (isEmailExist() === true) {
     add();
+    alreadyExists.classList.add("d-none");
+    clear();
   } else {
+    nameUp.classList.add("is-valid");
+    passwordUp.classList.add("is-valid");
+    emailUp.classList.add("is-invalid");
     alreadyExists.classList.remove("d-none");
+    alertFormup.classList.add("d-none");
   }
-
-  clear();
 });
 
 // ===============================
@@ -65,15 +69,21 @@ function add() {
   ) {
     NewArray.push(userName);
     localStorage.setItem("userArray", JSON.stringify(NewArray));
+    //
     alertFormup.classList.remove("d-none");
     alertForm.classList.add("d-none");
-
-    //   emailUp.classList.remove("is-valid");
-    //   alertAg.classList.re("is-valid");
-    //   spanAg.classList.remove("is-valid");
+    clear();
+    // is -valid
+    nameUp.classList.remove("is-valid");
+    passwordUp.classList.remove("is-valid");
+    emailUp.classList.remove("is-valid");
     console.log("done");
   } else {
     alertForm.classList.remove("d-none");
+    // is-invalid
+    nameUp.classList.add("is-invalid");
+    passwordUp.classList.add("is-invalid");
+    emailUp.classList.add("is-invalid");
     alertFormup.classList.add("d-none");
     inputs.classList.replace("is-invalid", "is-valid");
     console.log(inputs);
